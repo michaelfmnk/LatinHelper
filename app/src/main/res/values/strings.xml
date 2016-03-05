@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">LatinHelper</string>
+    <string name="wish">Желаю хорошо написать контрольную работу</string>
+    <string name="madeBy">разработано Мишей Фоменко</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="ru">
+        <!--1to10 START -->
+        <item>Подруга життя</item>
+        <item>Без плями і зморшки</item>
+        <item>Без зволікання</item>
+        <item>Історія - вителька життя</item>
+        <item>Історія - школа життя</item>
+        <item>Знання - сила</item>
+        <item>Де згода, там перемога</item>
+        <item>Досвід - найкращий учитель</item>
+        <item>На пам\'ять</item>
+        <item>Заради форми</item>
+        <!--1to10 END -->
+
+
+        <!--11to20 START -->
+        <item>Філософія - вчителька життя</item>
+        <item>Навіки прощай!</item>
+        <item>Вчись вислуховувати</item>
+        <item>Говорити - не робити</item>
+        <item>Поділяй і влодарюй</item>
+
+        <item>Роби і сподівайся!</item>
+        <item>Поспішай поволі!</item>
+        <item>Довіряй, але дивись кому!</item>
+        <item>Читати і не розуміти - значить, недбало ставитись</item>
+        <item>Пам\'ятай про життя</item>
+        <!--11to20 END -->
+
+
+        <!--21to30 START -->
+        <item>Добре затям!</item>
+        <item>Спершу вчити, а потім навчати</item>
+        <item>Прощай і люби мене</item>
+        <item>Жити - значить, мислити</item>
+        <item>Жити - значить, боротися</item>
+
+        <item>Живи і будь здоров!</item>
+        <item>Борода росте, а голова порожня</item>
+        <item>Мислю, одже я є</item>
+        <item>Коли мовчать, кричать</item>
+        <item>Доки дихаю, сподіваюсь</item>
+        <!--21to30 END -->
+
+
+        <!--31to40 START -->
+        <item>На воді пишеш</item>
+        <item>Лікар лікує, а природа оздоровляє</item>
+        <item>Нічого не маю, - ні про що не турбуюся</item>
+        <item>Гроші не пахнуть</item>
+        <item>Те, скільки знаємо крапля</item>
+
+        <item>Хто не йде вперед - втрачає</item>
+        <item>Куди прямуєш?</item>
+        <item>Якщо мовчать, - значить, схвалюють</item>
+        <item>Знаємо стільки, скільки пам\'ятаємо</item>
+        <item>Забороняю!</item>
+        <!--31to40 END -->
+
+
+        <!--41to50 START -->
+        <item>Осел з ослів</item>
+        <item>Або зі щитом, або на щиті</item>
+        <item>Життєпис ( Біографія )</item>
+        <item>Жартома</item>
+        <item>Вовк не кусає вовка</item>
+
+        <item>Дозвілля після роботи</item>
+        <item>Через труднощі до зірок</item>
+        <item>Хто сіє зло, той пожне зло</item>
+        <item>Без гніву і пристрасті</item>
+        <item>Небезпека у зволіканні</item>
+        <!--41to50 END -->
+
+
+        <!--51to60 START -->
+        <item>На довгі роки</item>
+        <item>Не багато числом, але змістовно</item>
+        <item>Голослівно</item>
+        <item>Для загального добра</item>
+        <item>Святая святих</item>
+
+        <item>Не чіпай мене</item>
+        <item>Все своє ношу з собою</item>
+        <item>Іди зі мною</item>
+        <item>Пізнай самого себе!</item>
+        <item>Другий я</item>
+        <!--51to60 END -->
+    </string-array>
+    <string-array name="lat">
+        <!--1to10 START -->
+        <item>Amica vitae</item>
+        <item>Sine macula et ruga</item>
+        <item>Sine mora</item>
+        <item>Historia est magistra vitae</item>
+        <item>Historia est schola vitae</item>
+
+        <item>Scientia potentia est</item>
+        <item>Ibi victoria, ubi concordia</item>
+        <item>Experientia est optima magistra</item>
+        <item>In memoriam</item>
+        <item>Pro forma</item>
+        <!--1to10 END -->
+
+
+        <!--11to20 START -->
+        <item>Philosophia est magistra vitae</item>
+        <item>Aeternum vale!</item>
+        <item>Auscultare disce!</item>
+        <item>Dicere non est facere</item>
+        <item>Divide et impera!</item>
+
+        <item>Fac et spera!</item>
+        <item>Festina lente!</item>
+        <item>Fide, sed cui, vide!</item>
+        <item>Legere et non intellegere neglegere est</item>
+        <item>Momento vivere</item>
+        <!--11to20 END -->
+
+
+        <!--21to30 START -->
+        <item>Nota bene!</item>
+        <item>Primum discere, deinde docere</item>
+        <item>Vale et me ama</item>
+        <item>Vivere est cogitare</item>
+        <item>Vivere est militare</item>
+
+        <item>Vive valeque!</item>
+        <item>Barba creescit, caput nescit</item>
+        <item>Cogito, ergo sum</item>
+        <item>Cum tacent, clamant</item>
+        <item>Dum spiro, spero</item>
+        <!--21to30 END -->
+
+
+        <!--31to40 START -->
+        <item>In aqua scribis</item>
+        <item>Medicus curat, natura sanat</item>
+        <item>Nihil habeo, hihil curo</item>
+        <item>Pecunia non olet</item>
+        <item>Quantum scimus, gutta est</item>
+
+        <item>Qui non proficit, deficit</item>
+        <item>Quo vadis?</item>
+        <item>Tacent, satis laudant</item>
+        <item>Tantum scimus, quantum memoria tenemus</item>
+        <item>Veto!</item>
+        <!--31to40 END -->
+
+
+        <!--41to50 START -->
+        <item>Asinus asinorum</item>
+        <item>Aut cum scuto, aut in scuto</item>
+        <item>Curriculum vitae</item>
+        <item>Ioci causa</item>
+        <item>Lapus non mordet lupum</item>
+
+        <item>Optium post negotium</item>
+        <item>Per aspera ad astra</item>
+        <item>Qui seminat mala, metet mala</item>
+        <item>Sine ira et studio</item>
+        <item>Periculum est in mora</item>
+        <!--41to50 END -->
+
+
+        <!--51to60 START -->
+        <item>Ad multos annos</item>
+        <item>Non multa, sed multum</item>
+        <item>Nudis verbis</item>
+        <item>Pro publico bono</item>
+        <item>Sanctum sanctorum</item>
+
+        <item>Noli me tangere!</item>
+        <item>Omnia mea mecum porto</item>
+        <item>Vade mecum!</item>
+        <item>Cognosce te ipsum</item>
+        <item>Alter ego</item>
+        <!--51to60 END -->
+
+
+    </string-array>
+    <string name="title_activity_wellcome">WellcomeActivity</string>
+    <string name="sort_by_latin">по лат. алфавиту</string>
+    <string name="sort_by_ua">по укр. алфавиту</string>
+    <string name="sort_by_id">по истории</string>
+</resources>

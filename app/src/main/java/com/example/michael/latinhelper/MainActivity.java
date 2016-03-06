@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     RecyclerView recyclerView;
     SearchView searchView;
     Toolbar toolbar;
-    Select data;
+    Select<Phrase> data;
     RecyclerViewMyAdapter adapter;
 
     @Override
@@ -49,10 +48,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
 
         if (prefs.getBoolean("firstrun", true)) {                       /** Initializing db on first start*/
-            ArrayList<String> listUA= new ArrayList<String>();
+            ArrayList<String> listUA= new ArrayList<>();
             Collections.addAll(listUA, getResources().getStringArray(R.array.ru));
 
-            ArrayList<String> listLAT= new ArrayList<String>();
+            ArrayList<String> listLAT= new ArrayList<>();
             Collections.addAll(listLAT, getResources().getStringArray(R.array.lat));
 
             if(listUA.size()!=listLAT.size()){
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 Phrase phrase = new Phrase(listUA.get(index),listLAT.get(index));
                 phrase.save();
             }
-            prefs.edit().putBoolean("firstrun", false).commit();/** set firstrun false -> if-block won't be run anymore */
+            prefs.edit().putBoolean("firstrun", false).apply(); /** set firstrun false -> if-block won't be run anymore */
 
         }
 
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         // as you specify a parent activity in AndroidManifest.xml.
         /**
          * depending on what button was pressed
-         * recyclerView get new Adapter with data sorted in a new way
+         * recyclerView gets new Adapter with data sorted in a new way
          */
         int id = item.getItemId();
 

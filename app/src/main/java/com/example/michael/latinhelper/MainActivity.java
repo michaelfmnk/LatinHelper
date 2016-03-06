@@ -22,7 +22,7 @@ import java.util.List;
 
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     static SharedPreferences prefs = null;
     static final String LOG_TAG = "MY_LOG_TAG";
@@ -48,18 +48,18 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
 
         if (prefs.getBoolean("firstrun", true)) {                       /** Initializing db on first start*/
-            ArrayList<String> listUA= new ArrayList<>();
+            ArrayList<String> listUA = new ArrayList<>();
             Collections.addAll(listUA, getResources().getStringArray(R.array.ru));
 
-            ArrayList<String> listLAT= new ArrayList<>();
+            ArrayList<String> listLAT = new ArrayList<>();
             Collections.addAll(listLAT, getResources().getStringArray(R.array.lat));
 
-            if(listUA.size()!=listLAT.size()){
+            if (listUA.size() != listLAT.size()) {
                 throw new DifferentLenthOfStringArraysException();
             }
 
-            for(int index = 0; index<listLAT.size();index++){
-                Phrase phrase = new Phrase(listUA.get(index),listLAT.get(index));
+            for (int index = 0; index < listLAT.size(); index++) {
+                Phrase phrase = new Phrase(listUA.get(index), listLAT.get(index));
                 phrase.save();
             }
             prefs.edit().putBoolean("firstrun", false).apply(); /** set firstrun false -> if-block won't be run anymore */
@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        List<Phrase> newData = filter(data.orderBy("latstring").list(),newText); /** get list with needed data */
+        List<Phrase> newData = filter(data.orderBy("latstring").list(), newText); /** get list with needed data */
         adapter.animateTo(newData);  /** say adapter to display filtered data*/
         recyclerView.scrollToPosition(0);
         return true;
@@ -148,12 +149,12 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
          */
         query = query.toLowerCase();
         final List<Phrase> filteredPhrasesList = new ArrayList<>();
-        for(Phrase model: phrases){
+        for (Phrase model : phrases) {
             final String latStr = model.getLatString().toLowerCase();
             final String uaStr = model.getUaString().toLowerCase();
-            if(uaStr.contains(query)){
+            if (uaStr.contains(query)) {
                 filteredPhrasesList.add(model);
-            }else if(latStr.contains(query)){
+            } else if (latStr.contains(query)) {
                 filteredPhrasesList.add(model);
             }
         }

@@ -14,6 +14,8 @@ import android.widget.SearchView;
 import com.example.michael.latinhelper.Exceptions.DifferentLenthOfStringArraysException;
 import com.example.michael.latinhelper.Sugar.Phrase;
 import com.honu.aloha.WelcomeHelper;
+
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.orm.query.Select;
 
 import java.util.ArrayList;
@@ -22,15 +24,15 @@ import java.util.List;
 
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class MainActivity extends AppCompatActivity implements MaterialSearchView.OnQueryTextListener {
 
     static SharedPreferences prefs = null;
     static final String LOG_TAG = "MY_LOG_TAG";
     RecyclerView recyclerView;
-    SearchView searchView;
     Toolbar toolbar;
     Select<Phrase> data;
     RecyclerViewMyAdapter adapter;
+    MaterialSearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         setContentView(R.layout.activity_main);
         prefs = getSharedPreferences("com.mycompany.myAppName", MODE_PRIVATE);
 
+
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        searchView = (SearchView) findViewById(R.id.searchView);
+        searchView = (MaterialSearchView) findViewById(R.id.search_view);
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         if (WelcomeHelper.isWelcomeRequired(this)) {                                     /** AlohaView appears only on first start*/
@@ -47,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
 
-        if (prefs.getBoolean("firstrun", true)) {                       /** Initializing db on first start*/
+        if (prefs.getBoolean("first_run", true)) {                       /** Initializing db on first start*/
             ArrayList<String> listUA = new ArrayList<>();
             Collections.addAll(listUA, getResources().getStringArray(R.array.ru));
 
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 Phrase phrase = new Phrase(listUA.get(index), listLAT.get(index));
                 phrase.save();
             }
-            prefs.edit().putBoolean("firstrun", false).apply(); /** set firstrun false -> if-block won't be run anymore */
+            prefs.edit().putBoolean("first_run", false).apply(); /** set first_run false -> if-block won't be run anymore */
 
         }
 
@@ -87,6 +91,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem item = menu.findItem(R.id.action_search);
+        searchView.setMenuItem(item);
+
+
         return true;
     }
 
@@ -99,15 +108,18 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         int id = item.getItemId();
 
         if (id == R.id.sortByUa) {
-            recyclerView.setAdapter(new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("uastring").list()));
+            adapter = new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("uastring").list());
+            recyclerView.setAdapter(adapter);
             return true;
         }
         if (id == R.id.sortByLatin) {
-            recyclerView.setAdapter(new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("latstring").list()));
+            adapter = new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("latstring").list());
+            recyclerView.setAdapter(adapter);
             return true;
         }
         if (id == R.id.sortByID) {
-            recyclerView.setAdapter(new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("id").list()));
+            adapter = new RecyclerViewMyAdapter(Select.from(Phrase.class).orderBy("id").list());
+            recyclerView.setAdapter(adapter);
             return true;
         }
 
@@ -117,8 +129,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     protected void onResume() {
         super.onResume();
-
-
     }
 
 
@@ -158,5 +168,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        if(searchView.isSearchOpen()){
+            searchView.closeSearch();
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
 }

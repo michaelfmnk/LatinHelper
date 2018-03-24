@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.michael.latinhelper.Sugar.Phrase;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -20,9 +22,12 @@ public class RecyclerViewMyAdapter extends RecyclerView.Adapter<RecyclerViewMyAd
 
     List<Phrase> data;
 
+
     public RecyclerViewMyAdapter(List<Phrase> data){
         this.data = data;
     }
+
+
 
 
 
@@ -54,9 +59,10 @@ public class RecyclerViewMyAdapter extends RecyclerView.Adapter<RecyclerViewMyAd
     }
 
     public void animateTo(List<Phrase> models) {
-        applyAndAnimateRemovals(models);
-        applyAndAnimateAdditions(models);
-        applyAndAnimateMovedItems(models);
+        applyAndAnimateRemovals(models);   // remove not needed cards
+        applyAndAnimateAdditions(models);  // add new cards (if you change query)
+        applyAndAnimateMovedItems(models); // moving cards
+
     }
     private void applyAndAnimateRemovals(List<Phrase> newModels) {
         for (int i = data.size() - 1; i >= 0; i--) {

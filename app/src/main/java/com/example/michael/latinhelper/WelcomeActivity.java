@@ -9,6 +9,6 @@ import com.honu.aloha.PageDescriptor;
 public class WelcomeActivity extends BaseWelcomeActivity {
     @Override
     public void createPages() {
-        addPage(new PageDescriptor(R.string.wish,R.string.madeBy, R.drawable.school,R.color.colorWelcome));
+        addPage(new PageDescriptor(R.string.wish, R.string.madeBy, R.drawable.school, R.color.colorWelcome));
     }
 }

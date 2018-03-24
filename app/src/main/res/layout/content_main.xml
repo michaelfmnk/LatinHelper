@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fcfbfc"
 
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -11,6 +12,7 @@
     tools:showIn="@layout/activity_main">
 
     <android.support.v7.widget.RecyclerView
+        android:background="#fcfbfc"
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

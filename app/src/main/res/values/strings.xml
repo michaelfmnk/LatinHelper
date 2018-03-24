@@ -91,6 +91,71 @@
         <item>Пізнай самого себе!</item>
         <item>Другий я</item>
         <!--51to60 END -->
+
+
+        <!--61to70 START -->
+        <item>Поміж нами</item>
+        <item>Ні собі, ні іншому</item>
+        <item>Диявол не такий страшний, як його малюють</item>
+        <item>Якщо хочеш, щоб тебе кохали, кохай сам</item>
+        <item>Клин клином вибивають</item>
+
+        <item>Третього не дано</item>
+        <item>Роблю, що можу</item>
+        <item>О часи, о звичаї!</item>
+        <item>Праця перемагає все</item>
+        <item>Людина розумна</item>
+        <!--61to70 END -->
+
+
+        <!--71to80 START -->
+        <item>Я вже не той, яким був</item>
+        <item>Глупота є матір\'ю всіх нещасть</item>
+        <item>Рівне рівним відшкодовується</item>
+        <item>Перший серед рівних</item>
+        <item>Сонце світить усім</item>
+
+        <item>В догідний час друзів нараховується</item>
+        <item>Мова правди проста</item>
+        <item>Всякий початок тяжкий</item>
+        <item>Схоже схожому радіє</item>
+        <item>Від старшого вола вчиться орати молодший</item>
+        <!--71to80 END -->
+
+
+        <!--81to90 START -->
+        <item>Юність - найсолодший вік</item>
+        <item>Добре здоров\'я краще за найбільше багатство</item>
+        <item>Біль душі тяжчий за тілесне страждання</item>
+        <item>Чесна смерть краща за ганебне життя</item>
+        <item>Краще надійний мир, ніж сподівана перемога</item>
+
+        <item>Мати красива, а дочка ще краща</item>
+        <item>Здоров\'я - найбільше добро</item>
+        <item>Воля народу - найвищий закон</item>
+        <item>Богів вигадав передусім страх</item>
+        <item>Життя нічого не дало людям без великої праці</item>
+        <!--81to90 END -->
+
+
+        <!--91to100 START -->
+        <item>Все змінюється</item>
+        <item>Прийшов, побачив, переміг</item>
+        <item>Фактично</item>
+        <item>Сказано - зроблено</item>
+        <item>Після написаного</item>
+
+        <item>Жереб кинуто</item>
+        <item>Обмовка</item>
+        <item>Власноруч</item>
+        <item>Без надії сподіваюсь</item>
+        <item>За дорученням</item>
+        <!--91to100 END -->
+
+        <item>Пам\'ятай про смерть</item>
+        <item>Отже, веселімось, доки ми молоді!</item>
+
+
     </string-array>
     <string-array name="lat">
         <!--1to10 START -->
@@ -183,9 +248,72 @@
         <!--51to60 END -->
 
 
+        <!--61to70 START -->
+        <item>Inter nos</item>
+        <item>Nec sibi, nec alteri</item>
+        <item>Diabolus non est tam alter, ac pingitur</item>
+        <item>Si vis amari, ama!</item>
+        <item>Clavus clavo pellitur</item>
+
+        <item>Tertium non datur</item>
+        <item>Facio, quod possum</item>
+        <item>O tempora, o mores!</item>
+        <item>Labor omnia vincit</item>
+        <item>Homo sapiens</item>
+        <!--61to70 END -->
+
+
+        <!--71to80 START -->
+        <item>Non sum qualis eram</item>
+        <item>Omnium malorum stultitia est mater</item>
+        <item>Par pari refertur</item>
+        <item>Primus inter pares</item>
+        <item>Sol omnibus lucet</item>
+
+        <item>Tempore felici multi numerantur amici</item>
+        <item>Simplex veritatis oratio est</item>
+        <item>Omne initium est difficile</item>
+        <item>Simili similis gaudet</item>
+        <item>A bove maiori discit arare minor</item>
+        <!--71to80 END -->
+
+
+        <!--81to90 START -->
+        <item>Aetas dulcissima adulescentia est</item>
+        <item>Bona valetudo melior est quam maximae divitiae</item>
+        <item>Dolor animi gravior est, quam corporis dolor</item>
+        <item>Honesta mors turpi vita potior</item>
+        <item>Melior est certa pax quam sperata victoria</item>
+
+        <item>O mater pulchra, filia pulchrior</item>
+        <item>Valetudo bonum optimum est</item>
+        <item>Voluntas populi suprema lex est</item>
+        <item>Fecit deos primus timor</item>
+        <item>Nil sine magno vita labore dedit mortalibus</item>
+        <!--81to90 END -->
+
+
+        <!--91to100 START -->
+        <item>Omnia mutantur</item>
+        <item>Veni, vidi, vici</item>
+        <item>De facto</item>
+        <item>Dictum - factum</item>
+        <item>Post scriptum</item>
+
+        <item>Alea iacta est</item>
+        <item>Lapsus linguae</item>
+        <item>Manu propria</item>
+        <item>Contra spem spero</item>
+        <item>In fidem</item>
+        <!--91to100 END -->
+
+        <item>Momento mori!</item>
+        <item>Gaudeamus igitur iuvenes dum sumus</item>
+
+
     </string-array>
     <string name="title_activity_wellcome">WellcomeActivity</string>
-    <string name="sort_by_latin">по лат. алфавиту</string>
-    <string name="sort_by_ua">по укр. алфавиту</string>
-    <string name="sort_by_id">по истории</string>
+    <string name="sort_by_latin">по лат. алфавіту</string>
+    <string name="sort_by_ua">по укр. алфавіту</string>
+    <string name="sort_by_id">по історії</string>
 </resources>
